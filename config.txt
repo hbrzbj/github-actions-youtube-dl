@@ -1,4 +1,4 @@
--f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
+# -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best'
 --batch-file playlist.txt
 --output downloads/%(title)s_%(id)s_%(fps)s.%(ext)s
 --continue
