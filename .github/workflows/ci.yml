@@ -19,9 +19,9 @@ jobs:
           git pull --rebase
           ./bin/youtube-dl --config-location config.txt
 
-          git add .
-          git commit -m "download youtube video"
-          git push
+          # git add .
+          # git commit -m "download youtube video"
+          # git push
 
           # # git lfs install
           # # git lfs track "*.mp4"
@@ -44,4 +44,3 @@ jobs:
           # 上传编译好的固件和 QMK 源码压缩包
           files: |
             /home/runner/work/github-actions-youtube-dl/github-actions-youtube-dl/downloads/*
-            
