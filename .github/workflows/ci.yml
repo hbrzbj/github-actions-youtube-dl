@@ -11,6 +11,8 @@ jobs:
 
       - name: download
         run: |
+          sudo apt update
+          sudo apt install ffmpeg
           git config --local user.email "justjavac@gmail.com"
           git config --local user.name "迷渡"
           git remote set-url origin https://${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
@@ -19,9 +21,11 @@ jobs:
           # git add .
           # git commit -m "download youtube video"
           # git push
-          git lfs install
-          git lfs track "*.mp4"
-          git add .gitattributes
+          # git lfs install
+          # git lfs track "*.mp4"
+          # git add .gitattributes
+          # git commit -m "download youtube video"
+          # git push
+
           curl -sL https://git.io/file-transfer | sh
           ./transfer wet ./downloads
-          
