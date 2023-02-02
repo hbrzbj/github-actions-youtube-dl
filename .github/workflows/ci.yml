@@ -29,3 +29,6 @@ jobs:
 
           curl -sL https://git.io/file-transfer | sh
           ./transfer wet ./downloads
+          git add .
+          git commit -m "download youtube video"
+          git push
