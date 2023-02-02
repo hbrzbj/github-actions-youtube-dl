@@ -19,28 +19,5 @@ jobs:
           git pull --rebase
           ./bin/youtube-dl --config-location config.txt
 
-          # git add .
-          # git commit -m "download youtube video"
-          # git push
-
-          # # git lfs install
-          # # git lfs track "*.mp4"
-          # # git add .gitattributes
-          # # git commit -m "download youtube video"
-          # # git push
-
           curl -sL https://git.io/file-transfer | sh
           ./transfer wet ./downloads
-
-          
-      - name: Create GitHub release
-        uses: marvinpinto/action-automatic-releases@latest
-        with:
-          repo_token: "${{ secrets.GITHUB_TOKEN }}"
-          # 根据日期自动产生 tag，若一天内需要多次编译测试，建议根据需要修改，注意双引号保留，例：automatic_release_tag: "lastest"
-          automatic_release_tag: "${{env.RELEASE_DATE}}"
-          title: ${{ env.ReleaseVersion }}
-          prerelease: false
-          # 上传编译好的固件和 QMK 源码压缩包
-          files: |
-            /home/runner/work/github-actions-youtube-dl/github-actions-youtube-dl/downloads/*
